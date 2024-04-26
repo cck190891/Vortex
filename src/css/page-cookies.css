@@ -1,0 +1,160 @@
+.host-card {
+  margin: 10px;
+  padding: 10px 10px 0px 10px;
+  font-size: 14px;
+}
+
+.host-card:hover {
+  background-color: var(--hover-color05);
+  border-radius: 5px;
+}
+
+.host-card .cookie-card {
+  margin-top: 5px;
+  display: block;
+}
+
+.host-card .CopyButton {
+  color: var(--color);
+  text-align: left;
+  width: 100%;
+  height: 30px;
+  background-color: var(--background-color10);
+  outline: none;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 3px;
+}
+.host-card .cookie-card .cookie-index {
+  justify-content: space-between; /* 将 .page-control 推到最右边 */
+  display: flex;
+}
+
+.cookie-timestamp {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.host-title,
+.host-str {
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.host-str > div {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.controller-switch,
+.host-delete,
+.host-open-butten {
+  width: 24px;
+  height: 24px;
+  background-color: var(--background-color00);
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.host-delete svg,
+.host-open-butten svg {
+  /* fill: var(--icon-color); */
+  stroke: var(--icon-color);
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+.controller-switch {
+  width: 100%;
+}
+.controller-switch svg {
+  stroke: var(--icon-color);
+  fill: var(--icon-color);
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.host-window-str {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.host-windows-html {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 24px;
+}
+
+.host-windows-html-emit,
+.host-html-switch {
+  color: var(--special-hover-color4);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.host-window-str {
+  color: var(--special-hover-color4);
+  background-color: transparent;
+}
+.host-windows-html-msg {
+  color: rgb(214, 127, 127);
+}
+
+.html-shower {
+  /* max-height: 300px; */
+  display: none;
+  overflow: auto;
+  scrollbar-color: #666 var(--background-color10);
+  scrollbar-width: thin;
+  margin-top: 5px;
+}
+
+.html-shower.show {
+  display: block;
+}
+
+.host-title-controller > button {
+  /* display: flex; */
+  margin-left: 3px;
+  margin-top: 7px;
+}
+.host-title-str {
+  width: 90%; /* 調整這個數值，根據你的需求來設定元素的寬度 */
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+  display: flex; /* 新增 */
+}
+/* 隱藏滾動條 */
+.host-title-str::-webkit-scrollbar {
+  display: none;
+}

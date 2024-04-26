@@ -1,0 +1,46 @@
+.checkbox-text {
+  display: flex;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.swal2-checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  transform: scale(2);
+}
+
+.checkbox-select {
+  text-align: center;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.swal2-title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+h2.swal2-title {
+  height: 15px;
+  padding: 0;
+}
+
+div.swal2-html-container {
+  padding: 0 !important;
+  margin: 30px 10px 0px 10px !important;
+  -ms-overflow-style: none; /* IE 和 Edge */
+  scrollbar-width: none;
+}

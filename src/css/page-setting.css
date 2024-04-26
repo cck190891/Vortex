@@ -1,0 +1,85 @@
+.setting-card {
+  margin: 5px 15px 5px 5px;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.setting-card:hover {
+  background-color: var(--hover-color05);
+  border-radius: 5px;
+}
+.setting-card .setting-title {
+  display: flex;
+}
+.setting-card .setting-category,
+.setting-card .setting-name,
+.setting-card .setting-info,
+.setting-card .setting-function {
+  margin: 0;
+}
+
+.setting-card .setting-category {
+  margin-right: 5px;
+}
+.setting-card .setting-info,
+.setting-card .setting-category {
+  color: var(--font-color75);
+}
+
+.setting-card .setting-info {
+  white-space: pre-wrap;
+}
+.setting-card .setting-show {
+  margin-top: 10px;
+  display: flex; /* 使用 flexbox 布局 */
+  flex-direction: column; /* 兒童元素垂直堆疊 */
+  justify-content: flex-start; /* 子元素從容器的頂部開始排列 */
+  align-items: flex-start; /* 子元素靠左對齊 */
+}
+.setting-card .CopyButton {
+  color: var(--color);
+  text-align: left;
+  width: 75%;
+  height: 30px;
+  background-color: var(--background-color10);
+  outline: none; /* 點擊時不顯示輪廓 */
+  border: none; /* 移除邊框 */
+  overflow: hidden; /* 隱藏溢出的內容 */
+  white-space: nowrap; /* 不換行 */
+  text-overflow: ellipsis;
+}
+
+.setting-card .setting-control {
+  display: flex;
+  align-items: center; /* Add this line to vertically align the items */
+}
+
+.setting-card .control-btn {
+  color: var(--special-hover-color4);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+}
+.setting-card .setting-control .number-input {
+  background-color: var(--background-color10);
+  border: none;
+  color: var(--color);
+  height: 30px;
+  padding: 1px 6px;
+}
+.setting-card .explain-text {
+  color: var(--color);
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0 5px;
+  outline: none;
+}
+
+.setting-card .setting-control .checkbox-input {
+  background-color: var(--background-color10);
+  border: none;
+  color: var(--color);
+  transform: scale(1.2);
+}

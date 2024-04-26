@@ -1,0 +1,26 @@
+.default-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px);
+}
+.default-card {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa; /* Light grey background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  word-wrap: break-word; /* 確保長單詞在邊緣處能夠正常斷行 */
+  overflow-wrap: break-word; /* 確保文本能夠自動在容器內斷行 */
+  hyphens: auto; /* 在需要的時候對詞進行連字符處理 */
+}
+
+.default-card p {
+  margin: 0 0 1em; /* Add some space between paragraphs */
+  line-height: 1.6; /* Improve readability */
+  color: var(--background-color); /* Darker text for better contrast */
+  font-size: 1rem; /* Default font size for readability */
+  text-align: justify; /* 對齊段落兩側的邊緣 */
+  text-justify: inter-word; /* 改善 justify 對齊時文本的間隔 */
+  text-indent: 2em; /* 使用em單位來做文字縮進，這裡示例是縮進2em */
+}
