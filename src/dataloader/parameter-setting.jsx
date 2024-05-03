@@ -34,42 +34,42 @@ const cookie_file = signal(
         </div>
     ])
 
-const local_state_file = signal(
-    [
-        'File ',
-        'Local state path ',
-        '',
+// const local_state_file = signal(
+//     [
+//         'File ',
+//         'Local state path ',
+//         '',
 
 
-        <div className='setting-handle'>
-            <div className='setting-show' >
-                <CopyButton target={Local_state_path} />
-            </div >
-            <div className='setting-control'>
-                <button className='control-btn' id='path-selecter' onClick={async () => {
-                    const selected = await select_single({ target_name: 'Local State' })
-                    Local_state_path.value = selected || Local_state_path.value;
-                }}>Select Local state path</button >
-                <button className='control-btn' id='path-reset' onClick={async () => {
-                    localStorage.removeItem('local-state-path');
-                    Local_state_path.value = await get_('local_state_path');
-                }}>Reset Local state path</button >
-            </div>
-        </div>
-    ])
-const appDataDir_Path = signal(
-    [
-        'Dir ',
-        'AppData path ',
-        '',
-        <div className='setting-handle'>
-            <div className='setting-show' >
-                <CopyButton target={appDataDirPath} />
-            </div >
-            <div className='setting-control'>
-            </div>
-        </div>
-    ])
+//         <div className='setting-handle'>
+//             <div className='setting-show' >
+//                 <CopyButton target={Local_state_path} />
+//             </div >
+//             <div className='setting-control'>
+//                 <button className='control-btn' id='path-selecter' onClick={async () => {
+//                     const selected = await select_single({ target_name: 'Local State' })
+//                     Local_state_path.value = selected || Local_state_path.value;
+//                 }}>Select Local state path</button >
+//                 <button className='control-btn' id='path-reset' onClick={async () => {
+//                     localStorage.removeItem('local-state-path');
+//                     Local_state_path.value = await get_('local_state_path');
+//                 }}>Reset Local state path</button >
+//             </div>
+//         </div>
+//     ])
+// const appDataDir_Path = signal(
+//     [
+//         'Dir ',
+//         'AppData path ',
+//         '',
+//         <div className='setting-handle'>
+//             <div className='setting-show' >
+//                 <CopyButton target={appDataDirPath} />
+//             </div >
+//             <div className='setting-control'>
+//             </div>
+//         </div>
+//     ])
 const localDataDir_Path = signal(
     [
         'Dir ',
@@ -83,19 +83,19 @@ const localDataDir_Path = signal(
             </div>
         </div>
     ])
-const dataDir_Path = signal(
-    [
-        'Dir ',
-        'Data path ',
-        '',
-        <div className='setting-handle'>
-            <div className='setting-show' >
-                <CopyButton target={dataDirPath} />
-            </div >
-            <div className='setting-control'>
-            </div>
-        </div>
-    ])
+// const dataDir_Path = signal(
+//     [
+//         'Dir ',
+//         'Data path ',
+//         '',
+//         <div className='setting-handle'>
+//             <div className='setting-show' >
+//                 <CopyButton target={dataDirPath} />
+//             </div >
+//             <div className='setting-control'>
+//             </div>
+//         </div>
+//     ])
 
 const cookie_remove_all = signal(
     [
@@ -160,7 +160,7 @@ const userAgent = signal(
     ])
 
 setting_table.push(cookie_file.value);
-setting_table.push(local_state_file.value);
+// setting_table.push(local_state_file.value);
 setting_table.push(localDataDir_Path.value);
 setting_table.push(cookie_remove_all.value);
 setting_table.push(html_shower_height_control.value);

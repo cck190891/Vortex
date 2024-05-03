@@ -12,7 +12,7 @@ const cookie_window = signal({});
 // }
 const cookies_info = signal({ cookies: { 'Nothing': [{ 'Name': 'Nothing', 'Path': '/', 'Value': 'Nothing' }] }, total: 0, ts: 0 });
 // cookie_host=[] : focus domain list
-const cookie_host = signal([]);
+const cookie_host = signal(JSON.parse(localStorage.getItem('cookies-host')) || []);
 // cookie_page_setting={
 //   show_all : show all cookies or focus cookies
 //   cookie_filiter : show cookie filiter or not
@@ -22,8 +22,8 @@ const cookie_page_setting = signal({ show_all: false, cookie_filiter: true, html
 
 (async () => {
     cookie_path.value = localStorage.getItem('cookies-path') || await get_('cookie_path') || '未選擇檔案';
-    Local_state_path.value = localStorage.getItem('local-state-path') || await get_('local_state_path') || '未選擇檔案';
-    cookie_host.value = JSON.parse(localStorage.getItem('cookies-host')) || [];
+    // Local_state_path.value = localStorage.getItem('local-state-path') || await get_('local_state_path') || '未選擇檔案';
+    // cookie_host.value = JSON.parse(localStorage.getItem('cookies-host')) || [];
     // cookies_info.value = JSON.parse(localStorage.getItem('cookies-info')) || { cookies: { 'key': 'value' }, total: 0, ts: null };
     cookie_page_setting.value = JSON.parse(localStorage.getItem('cookie-page-setting')) || { show_all: false, cookie_filiter: true, html_shower_height: 300 };
 })();
