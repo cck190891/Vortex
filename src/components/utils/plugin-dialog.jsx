@@ -1,11 +1,16 @@
 import { open } from '@tauri-apps/plugin-dialog';
 import Swal from 'sweetalert2';
 import '../../css/plugin-dialog.css'
-async function select_single({ target_name = null }) {
+async function select_single({ target_name = null, isdir = false, defaultP = null }) {
   const file = await open({
     multiple: false,
-    directory: false,
+    directory: isdir,
+    defaultPath: defaultP,
   });
+
+  if (isdir) {
+    return file
+  }
   if (target_name)
     if (file.name.toLowerCase() == target_name.toLowerCase()) {
       return file.path

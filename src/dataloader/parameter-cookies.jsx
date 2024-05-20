@@ -1,7 +1,9 @@
 import { signal, effect } from '@preact/signals'
 import { get_, cookies_Serialize } from '../components/utils/plugin-invokefn';
-
+import { appCacheDir } from '@tauri-apps/api/path';
+const appCacheDir_path = signal()
 const cookie_path = signal();
+
 const Local_state_path = signal();
 const cookie_window = signal({});
 // Save sturcture
@@ -21,6 +23,7 @@ const cookie_host = signal(JSON.parse(localStorage.getItem('cookies-host')) || [
 const cookie_page_setting = signal({ show_all: false, cookie_filiter: true, html_shower_height: 300 });
 
 (async () => {
+    appCacheDir_path.value = localStorage.getItem('appcache-path') || await appCacheDir() || '未選擇檔案';
     cookie_path.value = localStorage.getItem('cookies-path') || await get_('cookie_path') || '未選擇檔案';
     // Local_state_path.value = localStorage.getItem('local-state-path') || await get_('local_state_path') || '未選擇檔案';
     // cookie_host.value = JSON.parse(localStorage.getItem('cookies-host')) || [];
@@ -68,7 +71,7 @@ async function refresh_cookie() {
 
 
 
-export { cookie_path, Local_state_path, cookie_host, cookie_window, cookies_info, cookie_page_setting }
+export { cookie_path, Local_state_path, cookie_host, cookie_window, cookies_info, cookie_page_setting, appCacheDir_path }
 export { add_focus_domain, refresh_cookie, toggleShowAll }
 
 
@@ -90,8 +93,12 @@ effect(() => {
 
 
 
-
-
+effect(() => {
+    if (appCacheDir_path.value) {
+        localStorage.setItem('appcache-path', appCacheDir_path.value);
+        console.log('updata : appcache-path', appCacheDir_path.value)
+    }
+})
 
 
 
